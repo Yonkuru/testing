@@ -1,0 +1,48 @@
+#include <stdio.h>
+main(){ 
+	char firstname[25], lastname[25];
+	float physics, maths, biology, average;
+	
+	printf("Enter your Firstname:\n");
+	scanf("%s", &firstname);
+	printf("Enter your Lastname:\n");
+	scanf("%s", &lastname);
+	
+	printf("Enter Physics Marks:\n");
+	scanf("%f", &physics);
+	
+	printf("Enter Maths Marks:\n");
+	scanf("%f", &maths);
+	
+	printf("Enter Biology Marks:\n");
+	scanf("%f", &biology);
+	
+	printf("\n------------------------------\n\n");
+	
+	if(physics > 100 || physics < 0 ){
+		printf("Invalid Marks!");
+	}else if(maths > 100 || maths < 0 ){
+		printf("Invalid Marks!");
+	}else if(biology > 100 || biology < 0 ){
+		printf("Invalid Marks!");
+	}else{
+		average = (physics + maths + biology)/3;
+		printf("Marks for %s %s:\n", firstname, lastname);
+		printf("- Physics: %.2f% \n", physics);
+		printf("- Maths: %.2f% \n", maths);
+		printf("- Biology: %.2f% \n", biology);
+		printf("- Average: %.2f% \n", average);
+		
+		if(average >= 80 || average <= 100){
+			printf("\nStudent Got Grade A which is Excellent");
+		}else if(average >= 60 || average <= 79){
+			printf("\nStudent Got Grade B which is Good");
+		}else if(average >= 40 || average <= 59){
+			printf("\nStudent Got Grade C which is Fair");
+		}else if(average >= 0 || average <= 39){
+			printf("\nStudent Got Grade F which is Totally Fail");
+		}else{
+			printf("\nStudent is not graded, there is a problem in marks");
+		}
+	}
+}

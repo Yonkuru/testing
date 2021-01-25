@@ -1,0 +1,17 @@
+#include<stdio.h>
+main(){
+	
+	int n;
+	int numbers[n];
+	printf("Specify the size of the array: \n");
+	scanf("%d", &n);
+	
+	for(int x=0; x < n; x++){
+		printf("Enter the value on numbers[%d]: \n", x);
+		scanf("%d", &numbers[x]);
+	}
+	int i;
+	for (i = 0; i < n; i++){
+		printf("\nNumber on index %d is equal to %d \n", i, numbers[i]);
+	}
+}
